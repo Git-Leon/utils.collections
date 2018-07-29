@@ -1,4 +1,4 @@
-# ReflectionUtils (Introspection)
+# CollectionUtils
 The purpose of this repository is to
 
 ## Usage
@@ -28,7 +28,7 @@ The purpose of this repository is to
 ```xml
 <dependency>
   <groupId>com.github.git-leon</groupId>
-  <artifactId>introspection</artifactId>
+  <artifactId>collectionutils</artifactId>
   <version>1.0</version>
 </dependency>
 ```

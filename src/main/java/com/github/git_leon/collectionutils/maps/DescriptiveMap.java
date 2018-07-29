@@ -1,18 +1,20 @@
 package com.github.git_leon.collectionutils.maps;
 
+import com.github.git_leon.StringAssembler;
+
 import java.util.Collection;
-import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
+import java.util.concurrent.ConcurrentHashMap;
 
-public class InvertableMap<KeyType, ValueType> implements Map<KeyType, ValueType> {
+public class DescriptiveMap<KeyType, ValueType> implements Map<KeyType, ValueType> {
     private Map<KeyType, ValueType> map;
 
-    public InvertableMap() {
-        this(new DescriptiveMap<>());
+    public DescriptiveMap() {
+        this(new ConcurrentHashMap<>());
     }
 
-    public InvertableMap(Map<KeyType, ValueType> map) {
+    public DescriptiveMap(Map<KeyType, ValueType> map) {
         this.map = map;
     }
 
@@ -76,21 +78,12 @@ public class InvertableMap<KeyType, ValueType> implements Map<KeyType, ValueType
         return map.entrySet();
     }
 
-    public KeyType getKey(ValueType value) {
-        return invertMap().get(value);
-    }
-
-    public Map<ValueType, KeyType> invertMap() {
-        Map<ValueType, KeyType> result = new HashMap<>();
-        for (KeyType key : map.keySet()) {
-            result.put(map.get(key), key);
-        }
-        return result;
-    }
-
     @Override
     public String toString() {
-        return map.toString();
+        StringAssembler sa = new StringAssembler("\n");
+        entrySet().forEach(entry -> sa
+                .append("Key: " + entry.getKey())
+                .append("Value: " + entry.getValue()));
+        return sa.toString();
     }
-
 }

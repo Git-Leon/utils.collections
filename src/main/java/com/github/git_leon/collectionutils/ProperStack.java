@@ -1,43 +1,46 @@
 package com.github.git_leon.collectionutils;
 
 
-import java.util.Arrays;
-import java.util.Iterator;
-import java.util.List;
-import java.util.Stack;
+import java.util.*;
 
 
 /**
  * Created by leon on 3/13/18.
  */
-public class ProperStack<E> implements Iterable<E> {
+public class ProperStack<E> implements StackInterface<E> {
     private Stack<E> stack;
 
-    public ProperStack(List<E> list) {
+    public ProperStack(Iterable<E> iterable) {
         stack = new Stack<>();
-        stack.addAll(list);
+        if (iterable != null)
+            iterable.forEach((stackElement) -> stack.add(stackElement));
     }
 
     public ProperStack() {
         this(null);
     }
 
+    @Override
     public void push(E... e) {
         stack.addAll(Arrays.asList(e));
     }
 
+    @Override
     public E pop() {
         return stack.pop();
     }
 
+    @Override
     public E peek() {
         return stack.peek();
     }
 
+    @Override
     public boolean isEmpty() {
         return stack.isEmpty();
     }
 
+    @Override
     public int size() {
         return stack.size();
     }

@@ -1,7 +1,6 @@
-package com.github.git_leon.collectionutils;
+package com.github.git_leon.collectionutils.maps;
 
 
-import java.util.HashMap;
 import java.util.Map;
 
 
@@ -12,7 +11,7 @@ public class MapExtractor<KeyType, ValueType> {
     private Map<ValueType, ValueType> map;
 
     public MapExtractor(Map<ValueType, ValueType> map) {
-        this.map = new HashMap<>(map);
+        this.map = map;
     }
 
     public Long getLong(KeyType key) {

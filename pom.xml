@@ -6,7 +6,7 @@
 
     <groupId>com.github.git_leon</groupId>
     <artifactId>collectionutils</artifactId>
-    <version>1.5</version>
+    <version>1.6</version>
 
     <build>
         <plugins>

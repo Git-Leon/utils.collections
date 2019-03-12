@@ -9,7 +9,7 @@ import java.util.List;
  * @author leon on 8/9/18.
  */
 public class ListFacade<ObjectType> implements Iterable<ObjectType> {
-    public List<ObjectType> list;
+    private List<ObjectType> list;
 
     public ListFacade(List<ObjectType> list) {
         this.list = list;

@@ -53,8 +53,12 @@ public class ListFacade<ObjectType> implements Iterable<ObjectType> {
         return new ListFacade<>(list.stream().filter(predicate).collect(Collectors.toList()));
     }
 
-    public Collection<? extends ObjectType> collect(Collector<? super ObjectType, ?, Collection<? extends ObjectType>> collector) {
+    public Collection<?> collect(Collector<? super ObjectType, ?, Collection<? extends ObjectType>> collector) {
         return list.stream().collect(collector);
+    }
+
+    public List<ObjectType> toList() {
+        return list;
     }
 
     @Override

@@ -2,8 +2,12 @@ package com.github.git_leon.collectionutils;
 
 import com.github.git_leon.collectionutils.lists.GapList;
 
+import java.util.Collection;
 import java.util.Iterator;
 import java.util.List;
+import java.util.function.Predicate;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 /**
  * @author leon on 8/9/18.
@@ -20,16 +24,32 @@ public class ListFacade<ObjectType> implements Iterable<ObjectType> {
         iterable.forEach(o -> list.add(o));
     }
 
-    public void add(ObjectType objectType) {
-        list.add(objectType);
+    public void add(ObjectType obj) {
+        list.add(obj);
     }
 
-    public void remove(ObjectType objectType) {
-        list.remove(objectType);
+    public void addAll(Collection<? extends ObjectType> objCollection) {
+        list.addAll(objCollection);
     }
 
+    public void remove(ObjectType obj) {
+        list.remove(obj);
+    }
+ 
     public ObjectType get(int index) {
         return list.get(index);
+    }
+    
+    public Boolean contains(ObjectType obj) {
+        return list.contains(obj);
+    }
+
+    public Integer size() {
+        return list.size();
+    }
+
+    public ListFacade<ObjectType> filter(Predicate<ObjectType> predicate) {
+        return new ListFacade<>(list.stream().filter(predicate).collect(Collectors.toList()));
     }
 
     @Override

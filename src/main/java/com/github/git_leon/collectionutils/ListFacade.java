@@ -6,6 +6,7 @@ import java.util.Collection;
 import java.util.Iterator;
 import java.util.List;
 import java.util.function.Predicate;
+import java.util.stream.Collector;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
@@ -50,6 +51,10 @@ public class ListFacade<ObjectType> implements Iterable<ObjectType> {
 
     public ListFacade<ObjectType> filter(Predicate<ObjectType> predicate) {
         return new ListFacade<>(list.stream().filter(predicate).collect(Collectors.toList()));
+    }
+
+    public Collection<? extends ObjectType> collect(Collector<? super ObjectType, Object, Collection<? extends ObjectType>> collector) {
+        return list.stream().collect(collector);
     }
 
     @Override

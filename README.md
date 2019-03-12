@@ -29,6 +29,6 @@ The purpose of this repository is to
 <dependency>
   <groupId>com.github.git-leon</groupId>
   <artifactId>collectionutils</artifactId>
-  <version>1.0</version>
+  <version>1.6</version>
 </dependency>
 ```

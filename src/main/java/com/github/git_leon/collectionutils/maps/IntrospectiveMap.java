@@ -16,10 +16,11 @@ public class IntrospectiveMap extends UnmodifiableMap<String, Object> {
             try {
                 boolean defaultAccess = field.isAccessible();
                 field.setAccessible(true);
-                super.map.put(field.getName(), field.get(objectToIntrospect));
+                String fieldName = field.getName();
+                Object fieldValue = field.get(objectToIntrospect);
+                super.map.put(fieldName, fieldValue);
                 field.setAccessible(defaultAccess);
-            } catch (IllegalArgumentException | IllegalAccessException e) {
-                throw new Error(e);
+            } catch (Throwable t) {
             }
         }
     }

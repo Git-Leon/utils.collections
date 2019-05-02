@@ -20,7 +20,9 @@ public class IntrospectiveMap extends UnmodifiableMap<String, Object> {
                 Object fieldValue = field.get(objectToIntrospect);
                 super.map.put(fieldName, fieldValue);
                 field.setAccessible(defaultAccess);
-            } catch (Throwable t) {
+            } catch (NullPointerException npe){
+            } catch (IllegalArgumentException | IllegalAccessException iae) {
+                throw new Error(iae);
             }
         }
     }

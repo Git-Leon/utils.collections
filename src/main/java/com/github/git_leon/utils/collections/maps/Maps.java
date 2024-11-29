@@ -1,4 +1,4 @@
-package com.github.git_leon.collectionutils.maps;
+package com.github.git_leon.utils.collections.maps;
 
 import javafx.util.Pair;
 

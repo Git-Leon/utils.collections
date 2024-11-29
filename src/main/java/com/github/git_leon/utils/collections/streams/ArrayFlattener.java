@@ -1,4 +1,4 @@
-package com.github.git_leon.collectionutils.streams;
+package com.github.git_leon.utils.collections.streams;
 
 import java.util.Arrays;
 import java.util.stream.Stream;

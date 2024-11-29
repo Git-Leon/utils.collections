@@ -1,6 +1,6 @@
-package com.github.git_leon.collectionutils;
+package com.github.git_leon.utils.collections;
 
-import com.github.git_leon.collectionutils.lists.GapList;
+import com.github.git_leon.utils.collections.lists.GapList;
 
 import java.util.Collection;
 import java.util.Iterator;
@@ -8,7 +8,6 @@ import java.util.List;
 import java.util.function.Predicate;
 import java.util.stream.Collector;
 import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
 /**
  * @author leon on 8/9/18.

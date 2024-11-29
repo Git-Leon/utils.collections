@@ -1,4 +1,4 @@
-package com.github.git_leon.collectionutils;
+package com.github.git_leon.utils.collections;
 
 import org.junit.Test;
 

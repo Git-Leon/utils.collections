@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.github.git_leon</groupId>
-        <artifactId>collectionutils</artifactId>
+    <artifactId>collectionutils</artifactId>
     <version>2.0.3</version>
 
     <build>
@@ -55,9 +55,14 @@
 
     <dependencies>
         <dependency>
-            <groupId>com.github.git-leon</groupId>
+            <groupId>com.github.git_leon</groupId>
             <artifactId>stringutils</artifactId>
-            <version>1.2</version>
+            <version>2.0.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.openjfx</groupId>
+            <artifactId>javafx-controls</artifactId>
+            <version>15.0.1</version>
         </dependency>
     </dependencies>
 

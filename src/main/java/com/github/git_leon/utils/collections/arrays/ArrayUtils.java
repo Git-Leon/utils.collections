@@ -1,6 +1,6 @@
-package com.github.git_leon.collectionutils.arrays;
+package com.github.git_leon.utils.collections.arrays;
 
-import com.github.git_leon.collectionutils.Streams;
+import com.github.git_leon.utils.collections.Streams;
 
 import java.util.Arrays;
 

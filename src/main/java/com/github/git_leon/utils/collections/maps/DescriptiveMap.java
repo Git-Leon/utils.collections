@@ -1,9 +1,8 @@
-package com.github.git_leon.collectionutils.maps;
+package com.github.git_leon.utils.collections.maps;
 
-import com.github.git_leon.StringAssembler;
-import com.github.git_leon.collectionutils.arrays.ArrayUtils;
+import com.github.git_leon.utils.string.StringAssembler;
+import com.github.git_leon.utils.collections.arrays.ArrayUtils;
 
-import java.util.Arrays;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 

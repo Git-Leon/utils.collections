@@ -1,6 +1,6 @@
-package com.github.git_leon.collectionutils.arrays;
+package com.github.git_leon.utils.collections.arrays;
 
-import com.github.git_leon.collectionutils.maps.DescriptiveMap;
+import com.github.git_leon.utils.collections.maps.DescriptiveMap;
 import org.junit.Test;
 
 import java.util.Map;

@@ -1,4 +1,4 @@
-package com.github.git_leon.collectionutils.lists;
+package com.github.git_leon.utils.collections.lists;
 
 
 import java.util.AbstractList;

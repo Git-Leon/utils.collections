@@ -1,4 +1,4 @@
-package com.github.git_leon.collectionutils.maps;
+package com.github.git_leon.utils.collections.maps;
 
 import java.lang.reflect.Field;
 import java.util.Map;
@@ -20,9 +20,7 @@ public class IntrospectiveMap extends UnmodifiableMap<String, Object> {
                 Object fieldValue = field.get(objectToIntrospect);
                 super.map.put(fieldName, fieldValue);
                 field.setAccessible(defaultAccess);
-            } catch (NullPointerException npe){
-            } catch (IllegalArgumentException | IllegalAccessException iae) {
-                throw new Error(iae);
+            } catch (Throwable npe){
             }
         }
     }
